@@ -1,0 +1,78 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter" t:type="Layout" t:pageTitle="title">
+
+<t:zone t:id="output">
+	<t:grid source="pujas" row="puja" exclude="idPuja" add="nombre,winner,precioActual,minutes"
+	reorder="nombre,winner,precioActual,cantidadMaxima,fecha,minutes">
+		<p:nombreHeader>
+			${message:nombre}
+		</p:nombreHeader>
+		<p:precioActualHeader>
+			${message:precioActual}
+		</p:precioActualHeader>
+		<p:winnerHeader>
+			${message:winner}
+		</p:winnerHeader>
+		<p:cantidadMaximaHeader>
+			${message:cantidadMaxima}
+		</p:cantidadMaximaHeader>
+		<p:fechaHeader>
+			${message:fechaPuja}
+		</p:fechaHeader>
+		
+		<p:nombreCell>	
+			<t:pagelink page="ProductDetails" t:context="puja.producto.idProducto">${puja.producto.nombre}</t:pagelink>
+			
+		</p:nombreCell>
+		<p:winnerCell>		<p>${winner.login}</p>		</p:winnerCell>
+		<p:fechaCell>
+			<t:output value="puja.fecha.time" format="dateFormat"/>
+		</p:fechaCell>
+		<p:minutesCell>
+			<t:if test="!vencida"> 	${puja.producto.remainingTime}	</t:if> 
+			<t:if test="vencida"> ${message:vencida}</t:if> 		
+		</p:minutesCell>
+		<p:precioActualCell>	<p>${puja.producto.precioActual}</p>	</p:precioActualCell>
+		<p:empty>
+			<p>${message:noPujas}</p>
+		</p:empty>
+	</t:grid>
+</t:zone>
+<t:actionLink t:id="update" zone="output">${message:actualizar}</t:actionLink>
+
+	<!-- "Previous" and "Next" links. -->
+
+	<div class="previousNextLinks">
+
+		<span class="previousLink">
+
+			<t:if test="previousLinkContext">
+
+				<a href="#" t:type="PageLink" t:page="ShowBid"
+					t:context="previousLinkContext">
+					${message:link-previous}
+				</a>
+
+			</t:if>
+
+		</span>
+
+		<span class="nextLink">
+
+			<t:if test="nextLinkContext">
+
+				<a href="#" t:type="PageLink" t:page="ShowBid"
+					t:context="nextLinkContext">
+					${message:link-next}
+				</a>
+
+			</t:if>
+
+		</span>
+
+	</div>
+
+
+
+</html>
+	

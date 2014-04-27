@@ -1,0 +1,39 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter" t:type="Layout" t:pageTitle="title">
+<t:zone t:id="output">
+<t:grid source="product" exclude="version,idProducto,fechaVencimiento,remainingTime" add="categoria,seller,minutes,winner,bid" 
+reorder="categoria,nombre,descripcion,seller,fechaAnuncio,minutes,precioSalida,precioActual,infoEnvio,winner,bid">
+		<p:categoriaHeader>	${message:category-label}	</p:categoriaHeader>
+		<p:nombreHeader>	${message:product-name}	</p:nombreHeader>
+		<p:descripcionHeader>${message:description-label}</p:descripcionHeader>
+		<p:sellerHeader>	${message:seller-label}		</p:sellerHeader>
+		<p:fechaAnuncioHeader>	${message:advertisedDate-label}		</p:fechaAnuncioHeader>
+		<p:precioSalidaHeader>	${message:startPrice-label}		</p:precioSalidaHeader>
+		<p:precioActualHeader>	${message:presentPrice-label}		</p:precioActualHeader>
+		<p:infoEnvioHeader>	${message:deliveryInfo-label}</p:infoEnvioHeader>
+		<p:winnerHeader>	${message:winner-label}		</p:winnerHeader>
+		<p:bidHeader>								</p:bidHeader>
+		
+		<p:categoriaCell>	<p>${categoria.nombre}</p>	</p:categoriaCell>
+		<p:sellerCell>		<p>${seller.login}</p>		</p:sellerCell>
+		<p:fechaAnuncioCell>
+		<t:output value="product.fechaAnuncio.time" format="dateFormat"/>
+		</p:fechaAnuncioCell>
+		<p:minutesCell>		
+			<t:if test="!vencida"> 	${product.remainingTime}</t:if> 
+			<t:if test="vencida"> ${message:vencida}</t:if> 		 		
+		</p:minutesCell>
+		<p:winnerCell>		<p>${winner.login}</p>		</p:winnerCell>
+		<p:bidCell>
+			<t:if test="!vencida"> 	
+			<t:pagelink page="Bid" t:context="product.idProducto">${message:bid}</t:pagelink>
+			</t:if>
+			<t:if test="vencida"> <p>--</p></t:if>
+		</p:bidCell>
+		
+		<p:empty>			<p>${message:noProducts}</p>	</p:empty>
+	</t:grid>
+</t:zone>
+	<t:actionLink t:id="update" zone="output">${message:actualizar}</t:actionLink>
+</html>
+		

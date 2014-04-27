@@ -1,0 +1,12 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	t:type="Layout" t:pageTitle="title">
+
+	<div style="font-size:20px">
+		<div style="font-style:italic">
+			<div style="font-family:serif">
+				${message:successfulOperation}.
+			</div>
+		</div>
+	</div>
+
+</html>

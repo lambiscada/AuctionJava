@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="7.85" errors="0" skipped="0" tests="23" name="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="23.1-b03"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/maria/SoftwareIS/maven.1383215803700"/>
+    <property name="java.runtime.version" value="1.7.0_05-b06"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/94/ft4r1d9x4sg1gr5f1cm6z23m0000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/maria/SoftwareIS/.metadata/.plugins/org.eclipse.m2e.core/launches/m2conf4155485215900190786.tmp"/>
+    <property name="sun.jnu.encoding" value="US-ASCII"/>
+    <property name="java.library.path" value="/Users/maria/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.9"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/maria"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="US-ASCII"/>
+    <property name="user.name" value="maria"/>
+    <property name="java.class.path" value="/Users/maria/SoftwareIS/eclipse/configuration/org.eclipse.osgi/bundles/518/2/.cp/jars/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s /Users/maria/.m2/settings.xml test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="es"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_05"/>
+    <property name="java.ext.dirs" value="/Users/maria/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Users/maria/SoftwareIS/maven.1383215803700/EMBEDDED"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="6.625" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testLoginIncorrectPasword"/>
+  <testcase time="0.014" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testLoginWithNonExistentUser"/>
+  <testcase time="0.022" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testFindNonExistentUser"/>
+  <testcase time="0.126" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testUpdate"/>
+  <testcase time="0.009" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testUpdateWithNonExistentUser"/>
+  <testcase time="0.022" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testChangePassword"/>
+  <testcase time="0.015" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testChangePasswordWithIncorrectPassword"/>
+  <testcase time="0.013" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testChangePasswordWithNonExistentUser"/>
+  <testcase time="0.015" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testRegisterUserAndFindUserProfile"/>
+  <testcase time="0.041" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testRegisterDuplicatedUser"/>
+  <testcase time="0.05" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testLoginClearPassword"/>
+  <testcase time="0.018" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testLoginEncryptedPassword"/>
+  <testcase time="0.051" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testRegisterTarjetaBancoAndFindTarjetaBanco"/>
+  <testcase time="0.015" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testRegisterTarjetaBancoWithIncorrectNumber"/>
+  <testcase time="0.012" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testRegisterTarjetaBancoWithNonExstentUsuario"/>
+  <testcase time="0.022" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testRegisterTwoTarjetaBanco"/>
+  <testcase time="0.015" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testUpdateTarjetaBanco"/>
+  <testcase time="0.011" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testUpdateNonExistentTarjetaBanco"/>
+  <testcase time="0.041" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testUpdateTarjetaBancoWithShorterNumbre"/>
+  <testcase time="0.033" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testUpdateTarjetaBancoWithLongerNumbre"/>
+  <testcase time="0.052" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testIsVendedor"/>
+  <testcase time="0.01" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testIsVendedorWithNonExistentUser"/>
+  <testcase time="0.023" classname="es.udc.is.isg019.subastador.test.model.userservice.UserServiceTest" name="testIsNotVendedor"/>
+</testsuite>

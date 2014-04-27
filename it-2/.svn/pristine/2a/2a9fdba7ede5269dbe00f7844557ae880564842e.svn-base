@@ -1,0 +1,6 @@
+title=Paxina do registro da tarxeta bancaria
+menuExplanation=Rexistros da tarxeta bancaria
+submit=Rexistrar
+error_incorrectNumber=Numero de conta non válido.
+error_duplicateCredit=O usuario xa ten un número de conta.
+return=Atrás

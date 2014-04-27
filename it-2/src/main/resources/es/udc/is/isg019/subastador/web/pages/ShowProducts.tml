@@ -1,0 +1,69 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter" t:type="Layout" t:pageTitle="title">
+
+<t:zone t:id="output">
+	<t:grid source="products" row="product" include="nombre, precioActual"
+		add="minutes,seller" >
+		<p:nombreHeader>
+			${message:nombre}
+		</p:nombreHeader>
+		<p:precioActualHeader>
+			${message:precioActual}
+		</p:precioActualHeader>
+		<p:sellerHeader>
+			${message:seller}
+		</p:sellerHeader>
+		<p:nombreCell>
+			<t:pagelink page="ProductDetails" t:context="product.idProducto">${product.nombre}</t:pagelink>
+		</p:nombreCell>
+		<p:minutesCell>
+			<p>${minutes}</p>
+		</p:minutesCell>
+
+		<p:sellerCell>
+			<p>${seller.login}</p>
+		</p:sellerCell>
+
+		<p:empty>
+			<p>${message:noProducts}</p>
+		</p:empty>
+	</t:grid>
+</t:zone>
+
+		<t:actionLink t:id="update" zone="output">${message:actualizar}</t:actionLink>
+
+	<!-- "Previous" and "Next" links. -->
+
+	<div class="previousNextLinks">
+
+		<span class="previousLink">
+
+			<t:if test="previousLinkContext">
+
+				<a href="#" t:type="PageLink" t:page="ShowProducts"
+					t:context="previousLinkContext">
+					${message:link-previous}
+				</a>
+
+			</t:if>
+
+		</span>
+
+		<span class="nextLink">
+
+			<t:if test="nextLinkContext">
+
+				<a href="#" t:type="PageLink" t:page="ShowProducts"
+					t:context="nextLinkContext">
+					${message:link-next}
+				</a>
+
+			</t:if>
+
+		</span>
+
+	</div>
+
+
+
+</html>

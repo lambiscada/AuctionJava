@@ -1,0 +1,6 @@
+title=Pagina del registro de la tarjeta bancaria
+menuExplanation=Registro de la tarjeta bancaria
+submit=Registrar
+error_incorrectNumber=Número de cuenta no vÃ¡lido.
+error_duplicateCredit=El usuario ya tiene un número de cuenta.
+return=AtrÃ¡s

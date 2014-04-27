@@ -1,0 +1,65 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	t:type="Layout" t:pageTitle="title" 
+	t:menuExplanation="menuExplanation">
+ 		<t:if test="!idTarjeta">
+ <p>
+		<a href="#" t:type="PageLink" t:page="user/RegisterCredit">${message:registerCredit}</a>		       
+	</p>
+ </t:if>
+ <t:if test="idTarjeta">	
+	<form t:type="Form" t:id="sellProductForm">
+	   <t:errors/>
+	   <div class="field">        
+	        <t:label for="productName"/>
+	        <span class="entry">    
+	            <input t:id="productName" t:type="TextField"
+				       t:validate="required" 
+				       size="16" maxlength="30" />
+	        </span>
+	   </div>
+	    
+	   <div class="field">        
+	        <t:label for="description"/>
+	        <span class="entry">
+	            <input t:id="description" t:type="TextField"
+				       t:validate="required" 
+	                   size="80"/>
+	        </span>
+	    </div>
+
+	   <div class="field">        
+	        <t:label for="price"/>
+	        <span class="entry">
+	            <input t:id="price" t:type="TextField"
+				       t:validate="required,min=1" 
+	                   size="16" maxlength="8"/>
+	        </span>
+	    </div>
+	   
+	   
+	   
+	   <div class="field">        
+	        <t:label for="minutes"/>
+	        <span class="entry">    
+	            <input t:id="minutes" t:type="TextField"
+				       t:validate="required" 
+				       size="16" maxlength="30" />
+	        </span>
+	   </div>
+	   
+	   <div class="field">        
+	        <t:label for="deliveryInfo"/>
+	        <span class="entry">    
+	            <input t:id="deliveryInfo" t:type="TextField"
+				       t:validate="required" 
+				       size="16" maxlength="30" />
+	        </span>
+	   </div>
+	    <div class="button">
+	        <input type="submit" value="${message:submit}"/>        
+	    </div>
+	    
+	</form>
+	</t:if>
+ 
+</html>

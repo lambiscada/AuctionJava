@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Productos xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+	<Producto t:type="Loop" t:source="products" t:value="product">
+
+		<idProducto>${product.idProducto}</idProducto>
+		<Nombre>${product.nombre}</Nombre>
+		<Precio>${product.precioActual}</Precio>
+		<Minutos>${product.remainingTime}</Minutos>
+		<t:if test="${product.pujaGanadora}">
+		<Ganador>${product.pujaGanadora.usuario.login}</Ganador>
+		</t:if>
+	</Producto>
+	<ExistMoreProducts>
+		${productBlock.existMoreProductos}
+	</ExistMoreProducts>
+</Productos>

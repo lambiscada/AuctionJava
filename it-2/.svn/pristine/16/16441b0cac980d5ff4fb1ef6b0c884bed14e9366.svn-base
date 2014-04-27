@@ -1,0 +1,6 @@
+title=RegisterCredit page
+menuExplanation=Credit Card Register
+submit=Register
+error_incorrectNumber=CreditCard Number not valid.
+error_duplicateCredit=User has already a CreditCatd number related.
+return=Return

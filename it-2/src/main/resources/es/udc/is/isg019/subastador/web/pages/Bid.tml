@@ -1,0 +1,28 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter" t:type="Layout" t:pageTitle="title">
+<t:if test="bidMore"> 
+	<p>${message:minOrMore-bid} ${precio} </p></t:if>
+<t:if test="!bidMore"> 
+<p>${message:min-bid} ${precio} </p></t:if>
+
+
+<form t:type="Form" t:id="bidForm">
+	<t:errors/>
+	   <div class="field">       
+	 
+	        <t:label for="amount"/>
+	        <span class="entry">    
+	            <input t:id="amount" t:type="TextField"
+	            t:validate="required,min=0" 
+	                   size="16" maxlength="8" />
+	        </span>
+	   </div>
+	   
+	 
+	
+	    <div class="button">
+	        <input type="submit" value="${message:submit}"/>        
+	    </div>
+	
+	</form>
+</html>
